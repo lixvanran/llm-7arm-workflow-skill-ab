@@ -26,30 +26,53 @@ REPO = HERE.parent.parent
 REPRO = REPO / "来源与底稿" / "第三组_治塌缩层3" / "cmp8repo" / "repro"
 NAS = pathlib.Path("/run/csi/mount-root/nas/eab0d61a99b6696edb3d2aff87b585e8/.skills")
 
-sys.path.insert(0, str(REPRO / "src"))
+# ★ 路径解析：★ 【包内 vendor 优先】→ 【worktree 原件】→ 【NAS skill】★★
+# ★ 三级查找的意义：★ 仓被单独 clone 下来时（★ 没有 worktree 上下文 ★）也能跑 ★
+_V = HERE / "vendor"
+if (_V / "thirdgrp" / "workflow.py").exists():
+    THIRD_SRC = _V / "thirdgrp"          # ★ 包内副本（★ 自包含 ★）
+    L0_AGENT = _V / "l0" / "agent.py"
+    SKILL_ROOT = _V / "skill"
+else:
+    THIRD_SRC = REPRO / "src"            # ★ 回落：worktree 里的原件 ★
+    L0_AGENT = REPO / "l0" / "agent.py"
+    SKILL_ROOT = NAS if NAS.exists() else _V / "skill"
+
+sys.path.insert(0, str(THIRD_SRC))
 import workflow as W            # noqa: E402  ★ ③组的治塌缩工作流 ★
 import anchor_out as AO          # noqa: E402  ★ ③组的对照臂与装配 ★
 # ★ L0 的 agent.py 按【文件路径】导入（★ 不把 l0/ 放进 sys.path、★ 否则它的 llm.py 会抢同名模块 ★）
 import importlib.util as _ilu
-_sp = _ilu.spec_from_file_location("l0_agent", str(REPO / "l0" / "agent.py"))
+_sp = _ilu.spec_from_file_location("l0_agent", str(L0_AGENT))
 _agent = _ilu.module_from_spec(_sp); _sp.loader.exec_module(_agent)
 ProblemSpaceAgent = _agent.ProblemSpaceAgent
 
 MODEL = "MiniMax-M3"
 
+def _sk(name, rel):
+    """★ skill 资产路径：★ 先试包内 vendor、★ 再试 NAS ★"""
+    for root in (SKILL_ROOT, NAS):
+        if not root:
+            continue
+        cand = root / name / rel
+        if cand.exists():
+            return cand
+    return SKILL_ROOT / name / rel
+
+
 SKILL_PKG = {
-    "skill_v1": {"skill": NAS / "thinking-surface" / "SKILL.md",
-                 "refs": [NAS / "thinking-surface" / "references" / "path-recipes.md",
-                          NAS / "thinking-surface" / "references" / "absence-check.md",
-                          NAS / "thinking-surface" / "references" / "fork-map.md",
-                          NAS / "thinking-surface" / "references" / "signature-rules.md",
-                          NAS / "thinking-surface" / "references" / "merge-rules.md"]},
-    "skill_v3": {"skill": NAS / "thinking-surface-v3" / "SKILL.md",
-                 "refs": [NAS / "thinking-surface-v3" / "references" / "path-recipes.md",
-                          NAS / "thinking-surface-v3" / "references" / "mechanism-slots.md",
-                          NAS / "thinking-surface-v3" / "references" / "fork-map.md",
-                          NAS / "thinking-surface-v3" / "references" / "signature-rules.md",
-                          NAS / "thinking-surface-v3" / "references" / "merge-rules.md"]},
+    "skill_v1": {"skill": _sk("thinking-surface", "SKILL.md"),
+                 "refs": [_sk("thinking-surface", "references") / "path-recipes.md",
+                          _sk("thinking-surface", "references") / "absence-check.md",
+                          _sk("thinking-surface", "references") / "fork-map.md",
+                          _sk("thinking-surface", "references") / "signature-rules.md",
+                          _sk("thinking-surface", "references") / "merge-rules.md"]},
+    "skill_v3": {"skill": _sk("thinking-surface-v3", "SKILL.md"),
+                 "refs": [_sk("thinking-surface-v3", "references") / "path-recipes.md",
+                          _sk("thinking-surface-v3", "references") / "mechanism-slots.md",
+                          _sk("thinking-surface-v3", "references") / "fork-map.md",
+                          _sk("thinking-surface-v3", "references") / "signature-rules.md",
+                          _sk("thinking-surface-v3", "references") / "merge-rules.md"]},
 }
 N_BRANCH = 4
 

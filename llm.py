@@ -33,6 +33,7 @@ class Stats:
         self.calls = []
         self.tokens = 0
         self.fail = 0
+        self.truncated = 0
 
     def add(self, rec):
         self.calls.append(rec)
@@ -41,7 +42,8 @@ class Stats:
             self.fail += 1
 
     def summary(self):
-        return {"n_calls": len(self.calls), "n_fail": self.fail, "tokens": self.tokens}
+        return {"n_calls": len(self.calls), "n_fail": self.fail,
+                "n_truncated": self.truncated, "tokens": self.tokens}
 
 
 class LLMBase:
@@ -82,23 +84,37 @@ class LLMBase:
             t0 = time.time()
             try:
                 txt, fr, usage = self._post(prompt, mt, tt)
-                ok = bool(txt.strip()) and fr != "length"
-                rec = {"ok": ok, "finish_reason": fr, "chars": len(txt),
+                # ★ 【截断】与【失败】必须分开记（★ 混在一起 ⇒ 读者以为臂坏了 ★）★★
+                truncated = (fr == "length")
+                ok = bool(txt.strip())
+                rec = {"ok": ok, "truncated": truncated, "finish_reason": fr, "chars": len(txt),
                        "total_tokens": usage.get("total_tokens", 0),
                        "wall_s": round(time.time() - t0, 2), "attempt": attempt,
                        "prompt_chars": len(prompt)}
                 self.stats.add(rec)
                 self.rec.append(rec)
-                if ok:
+                if ok and not truncated:
+                    return txt
+                # ★ 截断了但有内容 ⇒ ★ 【不算失败】★ ★ 交回去并让上层知道它被截了 ★
+                if ok and truncated:
+                    self.stats.truncated += 1
                     return txt
                 last = "empty_or_length"
             except Exception as e:                       # noqa: BLE001
-                rec = {"ok": False, "error": str(e)[:160], "wall_s": round(time.time() - t0, 2),
+                msg = str(e)
+                # ★ MiniMax 的两种 429 要分清（★ 实测 ★）：
+                #   ★ 2062 = 速率限制 ⇒ 退避可过；★ 2056 = 用量上限 ⇒ 退避无用 ★
+                kind = "rate_limited" if "429" in msg else "error"
+                rec = {"ok": False, "error": msg[:160], "kind": kind,
+                       "wall_s": round(time.time() - t0, 2),
                        "attempt": attempt, "total_tokens": 0, "chars": 0,
                        "finish_reason": "error"}
                 self.stats.add(rec)
                 self.rec.append(rec)
-                last = str(e)[:120]
+                last = msg[:120]
+                if kind == "rate_limited":
+                    time.sleep(8 * attempt)      # ★ 限流要多退避 ★
+                    continue
             time.sleep(2 * attempt)
         return ""
 

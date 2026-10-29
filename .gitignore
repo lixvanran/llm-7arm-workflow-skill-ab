@@ -1,3 +1,6 @@
-out/units_*.jsonl
-out/calls_*.jsonl
 __pycache__/
+_stage/
+out/units_smoke.jsonl
+out/calls_smoke.jsonl
+out/units_selftest.jsonl
+out/calls_selftest.jsonl

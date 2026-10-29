@@ -9,7 +9,9 @@
 import ast, pathlib, re, unicodedata
 
 REPO = pathlib.Path(__file__).resolve().parent.parent.parent
-RUN_L0 = REPO / "l0" / "run_l0.py"
+# ★ 路径：★ 包内 vendor 优先、★ 否则回落 worktree 原件（★ 仓单独 clone 也能跑 ★）
+_LOCAL = pathlib.Path(__file__).resolve().parent / "vendor" / "l0" / "run_l0.py"
+RUN_L0 = (_LOCAL if _LOCAL.exists() else REPO / "l0" / "run_l0.py")
 
 
 def _load_fns(names):

@@ -1,0 +1,177 @@
+{
+  "tag": "ab1",
+  "n_rows": 189,
+  "n_ok": 188,
+  "n_fail": 1,
+  "agg": {
+    "direct": {
+      "n": 27,
+      "cov_cont": 0.3456,
+      "hit_rate": 0.0941,
+      "absence": 0.6544,
+      "n_claims": 5.2,
+      "calls": 2.0,
+      "calls_fail": 0,
+      "tokens": 878,
+      "wall": 4.2
+    },
+    "bestof3": {
+      "n": 26,
+      "cov_cont": 0.3918,
+      "hit_rate": 0.1737,
+      "absence": 0.6082,
+      "n_claims": 9.5,
+      "calls": 13.3,
+      "calls_fail": 166,
+      "tokens": 3353,
+      "wall": 20.1
+    },
+    "w_layer2": {
+      "n": 27,
+      "cov_cont": 0.3832,
+      "hit_rate": 0.1667,
+      "absence": 0.6168,
+      "n_claims": 12.0,
+      "calls": 12.1,
+      "calls_fail": 137,
+      "tokens": 4701,
+      "wall": 22.9
+    },
+    "w_layer3": {
+      "n": 27,
+      "cov_cont": 0.3863,
+      "hit_rate": 0.1509,
+      "absence": 0.6137,
+      "n_claims": 11.7,
+      "calls": 15.1,
+      "calls_fail": 135,
+      "tokens": 6218,
+      "wall": 28.3
+    },
+    "l0_expand": {
+      "n": 27,
+      "cov_cont": 0.4303,
+      "hit_rate": 0.2512,
+      "absence": 0.5697,
+      "n_claims": 12.0,
+      "calls": 14.1,
+      "calls_fail": 11,
+      "tokens": 12548,
+      "wall": 80.0
+    },
+    "skill_v1": {
+      "n": 27,
+      "cov_cont": 0.2934,
+      "hit_rate": 0.0472,
+      "absence": 0.7066,
+      "n_claims": 11.4,
+      "calls": 7.1,
+      "calls_fail": 0,
+      "tokens": 5234,
+      "wall": 27.1
+    },
+    "skill_v3": {
+      "n": 27,
+      "cov_cont": 0.2824,
+      "hit_rate": 0.0426,
+      "absence": 0.7176,
+      "n_claims": 11.3,
+      "calls": 7.1,
+      "calls_fail": 0,
+      "tokens": 5274,
+      "wall": 23.6
+    }
+  },
+  "comps": {
+    "bestof3 vs direct": {
+      "n": 26,
+      "median_d": 0.0414,
+      "mean_d": 0.0432,
+      "ci95": [
+        0.029700000000000032,
+        0.09060000000000007
+      ],
+      "pos": 20,
+      "zero": 0,
+      "neg": 6,
+      "hit_pos": 7,
+      "hit_neg": 2,
+      "hit_zero": 17
+    },
+    "w_layer2 vs direct": {
+      "n": 27,
+      "median_d": 0.0422,
+      "mean_d": 0.0376,
+      "ci95": [
+        0.012400000000000022,
+        0.07350000000000001
+      ],
+      "pos": 21,
+      "zero": 0,
+      "neg": 6,
+      "hit_pos": 9,
+      "hit_neg": 3,
+      "hit_zero": 15
+    },
+    "w_layer3 vs direct": {
+      "n": 27,
+      "median_d": 0.0534,
+      "mean_d": 0.0408,
+      "ci95": [
+        -0.0006000000000000449,
+        0.08299999999999991
+      ],
+      "pos": 18,
+      "zero": 0,
+      "neg": 9,
+      "hit_pos": 6,
+      "hit_neg": 1,
+      "hit_zero": 20
+    },
+    "l0_expand vs direct": {
+      "n": 27,
+      "median_d": 0.0832,
+      "mean_d": 0.0847,
+      "ci95": [
+        0.04574999999999996,
+        0.137
+      ],
+      "pos": 22,
+      "zero": 0,
+      "neg": 5,
+      "hit_pos": 14,
+      "hit_neg": 1,
+      "hit_zero": 12
+    },
+    "skill_v1 vs direct": {
+      "n": 27,
+      "median_d": -0.0684,
+      "mean_d": -0.0521,
+      "ci95": [
+        -0.10399999999999993,
+        0.0019999999999998908
+      ],
+      "pos": 9,
+      "zero": 0,
+      "neg": 18,
+      "hit_pos": 2,
+      "hit_neg": 6,
+      "hit_zero": 19
+    },
+    "skill_v3 vs direct": {
+      "n": 27,
+      "median_d": -0.052,
+      "mean_d": -0.0631,
+      "ci95": [
+        -0.10483333333333333,
+        -0.03049999999999997
+      ],
+      "pos": 5,
+      "zero": 0,
+      "neg": 22,
+      "hit_pos": 0,
+      "hit_neg": 6,
+      "hit_zero": 21
+    }
+  }
+}

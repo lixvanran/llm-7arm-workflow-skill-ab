@@ -1,0 +1,191 @@
+★ 跑批：7 臂 × 9 题 × 3 rep ｜ 已完成 0 ｜ 待跑 189
+  [  1/189] direct     D02 rep2 → cov=0.0 hit=0/5 claims=5 calls=2 tok=858 3s
+  [  2/189] direct     D02 rep1 → cov=0.0 hit=0/5 claims=7 calls=2 tok=820 3s
+  [  3/189] direct     D01 rep3 → cov=0.0 hit=0/6 claims=5 calls=2 tok=731 4s
+  [  4/189] direct     D01 rep2 → cov=0.0 hit=0/6 claims=5 calls=2 tok=827 4s
+  [  5/189] direct     D01 rep1 → cov=0.0 hit=0/6 claims=6 calls=2 tok=1043 5s
+  [  6/189] direct     D02 rep3 → cov=0.0 hit=0/5 claims=4 calls=2 tok=779 3s
+  [  7/189] direct     D03 rep2 → cov=0.0 hit=0/6 claims=4 calls=2 tok=743 4s
+  [  8/189] direct     D04 rep1 → cov=0.0 hit=0/5 claims=3 calls=2 tok=813 3s
+  [  9/189] direct     D03 rep3 → cov=0.167 hit=1/6 claims=10 calls=2 tok=941 5s
+  [ 10/189] direct     D03 rep1 → cov=0.0 hit=0/6 claims=4 calls=2 tok=902 6s
+  [ 11/189] direct     D04 rep2 → cov=0.0 hit=0/5 claims=8 calls=2 tok=869 3s
+  [ 12/189] direct     D05 rep1 → cov=0.2 hit=1/5 claims=5 calls=2 tok=774 3s
+  [ 13/189] direct     D04 rep3 → cov=0.0 hit=0/5 claims=6 calls=2 tok=1001 4s
+  [ 14/189] direct     D05 rep3 → cov=0.4 hit=2/5 claims=4 calls=2 tok=787 3s
+  [ 15/189] direct     D05 rep2 → cov=0.4 hit=2/5 claims=5 calls=2 tok=853 3s
+  [ 16/189] direct     D06 rep1 → cov=0.25 hit=1/4 claims=5 calls=2 tok=1016 6s
+  [ 17/189] direct     D07 rep1 → cov=0.0 hit=0/8 claims=5 calls=2 tok=958 4s
+  [ 18/189] direct     D06 rep2 → cov=0.25 hit=1/4 claims=5 calls=2 tok=962 5s
+  [ 19/189] direct     D07 rep2 → cov=0.125 hit=1/8 claims=5 calls=2 tok=937 5s
+  [ 20/189] direct     D06 rep3 → cov=0.75 hit=3/4 claims=9 calls=2 tok=1055 7s
+  [ 21/189] direct     D08 rep1 → cov=0.0 hit=0/8 claims=4 calls=2 tok=807 3s
+  [ 22/189] direct     D08 rep2 → cov=0.0 hit=0/8 claims=4 calls=2 tok=814 3s
+  [ 23/189] direct     D08 rep3 → cov=0.0 hit=0/8 claims=4 calls=2 tok=774 3s
+  [ 24/189] direct     D09 rep1 → cov=0.0 hit=0/8 claims=5 calls=2 tok=911 4s
+  [ 25/189] direct     D09 rep3 → cov=0.0 hit=0/8 claims=4 calls=2 tok=854 4s
+  [ 26/189] direct     D09 rep2 → cov=0.0 hit=0/8 claims=5 calls=2 tok=914 5s
+  [ 27/189] direct     D07 rep3 → cov=0.0 hit=0/8 claims=5 calls=2 tok=967 9s
+  [ 28/189] bestof3    D01 rep1 → cov=0.0 hit=0/6 claims=10 calls=7 tok=3290 6s
+  [ 29/189] bestof3    D01 rep3 → cov=0.0 hit=0/6 claims=9 calls=7 tok=3173 6s
+  [ 30/189] bestof3    D02 rep2 → cov=0.0 hit=0/5 claims=4 calls=7 tok=2886 6s
+  [ 31/189] bestof3    D02 rep3 → cov=0.0 hit=0/5 claims=4 calls=7 tok=2892 5s
+  [ 32/189] bestof3    D01 rep2 → cov=0.0 hit=0/6 claims=7 calls=7 tok=2833 9s
+  [ 33/189] bestof3    D02 rep1 → cov=0.0 hit=0/5 claims=4 calls=7 tok=2814 10s
+  [ 34/189] bestof3    D03 rep2 → cov=0.167 hit=1/6 claims=12 calls=30 tok=4142 38s
+  [ 35/189] bestof3    D04 rep1 → cov=0.4 hit=2/5 claims=12 calls=31 tok=3553 38s
+  [ 36/189] bestof3    D03 rep3 → cov=0.0 hit=0/6 claims=12 calls=31 tok=3634 40s
+  [ 37/189] bestof3    D04 rep2 → cov=0.0 hit=0/5 claims=10 calls=31 tok=3218 38s
+  [ 38/189] bestof3    D03 rep1 → cov=0.0 hit=0/6 claims=12 calls=31 tok=3654 44s
+  [ 39/189] bestof3    D04 rep3 → cov=0.0 hit=0/5 claims=7 calls=7 tok=2991 5s
+  [ 40/189] bestof3    D05 rep1 → cov=0.4 hit=2/5 claims=10 calls=7 tok=3022 6s
+  [ 41/189] bestof3    D05 rep2 → cov=0.4 hit=2/5 claims=12 calls=7 tok=3114 8s
+  [ 42/189] bestof3    D05 rep3 → cov=0.4 hit=2/5 claims=10 calls=7 tok=3081 8s
+  [ 43/189] bestof3    D06 rep1 → cov=0.75 hit=3/4 claims=12 calls=7 tok=4089 7s
+  [ 44/189] bestof3    D06 rep2 → cov=0.75 hit=3/4 claims=12 calls=7 tok=3929 9s
+  [ 45/189] bestof3    D06 rep3 → cov=0.5 hit=2/4 claims=12 calls=7 tok=3977 10s
+  [ 46/189] bestof3    D08 rep2 → cov=0.0 hit=0/8 claims=0 calls=27 tok=0 38s
+  [ 47/189] bestof3    D07 rep3 → cov=0.0 hit=0/8 claims=0 calls=15 tok=2906 45s
+  [ 48/189] bestof3    D08 rep1 → cov=0.5 hit=4/8 claims=12 calls=31 tok=3257 43s
+  [ 49/189] bestof3    D07 rep1 → cov=0.0 hit=0/8 claims=10 calls=15 tok=3248 48s
+  [ 50/189] bestof3    D07 rep2 → cov=0.125 hit=1/8 claims=11 calls=12 tok=3974 48s
+  [ 51/189] bestof3    D08 rep3 → cov=0.125 hit=1/8 claims=12 calls=7 tok=3102 7s
+  [ 52/189] bestof3    D09 rep1 → cov=0.0 hit=0/8 claims=11 calls=7 tok=3308 11s
+  [ 53/189] bestof3    D09 rep2 → cov=0.0 hit=0/8 claims=9 calls=7 tok=3536 12s
+  [ 54/189] bestof3    D09 rep3 → cov=0.0 hit=0/8 claims=12 calls=7 tok=3571 14s
+  [ 55/189] w_layer2   D01 rep1 → cov=0.0 hit=0/6 claims=12 calls=7 tok=4726 16s
+  [ 56/189] w_layer2   D01 rep2 → cov=0.0 hit=0/6 claims=12 calls=7 tok=5153 18s
+  [ 57/189] w_layer2   D02 rep1 → cov=0.0 hit=0/5 claims=12 calls=7 tok=4457 14s
+  [ 58/189] w_layer2   D01 rep3 → cov=0.0 hit=0/6 claims=12 calls=7 tok=4646 16s
+  [ 59/189] w_layer2   D02 rep2 → cov=0.0 hit=0/5 claims=12 calls=7 tok=4282 12s
+  [ 60/189] w_layer2   D03 rep3 → cov=0.0 hit=0/6 claims=12 calls=7 tok=4370 8s
+  [ 61/189] w_layer2   D03 rep1 → cov=0.0 hit=0/6 claims=12 calls=7 tok=4374 10s
+  [ 62/189] w_layer2   D02 rep3 → cov=0.0 hit=0/5 claims=12 calls=7 tok=4467 16s
+  [ 63/189] w_layer2   D03 rep2 → cov=0.0 hit=0/6 claims=12 calls=13 tok=4622 35s
+  [ 64/189] w_layer2   D04 rep1 → cov=0.6 hit=3/5 claims=12 calls=19 tok=5249 38s
+  [ 65/189] w_layer2   D04 rep2 → cov=0.2 hit=1/5 claims=12 calls=25 tok=5216 36s
+  [ 66/189] w_layer2   D05 rep2 → cov=0.6 hit=3/5 claims=12 calls=7 tok=4126 10s
+  [ 67/189] w_layer2   D05 rep1 → cov=0.4 hit=2/5 claims=12 calls=25 tok=3937 36s
+  [ 68/189] w_layer2   D04 rep3 → cov=0.6 hit=3/5 claims=11 calls=25 tok=4954 39s
+  [ 69/189] w_layer2   D06 rep1 → cov=0.25 hit=1/4 claims=12 calls=7 tok=4626 8s
+  [ 70/189] w_layer2   D05 rep3 → cov=0.6 hit=3/5 claims=12 calls=7 tok=4052 14s
+  [ 71/189] w_layer2   D06 rep3 → cov=1.0 hit=4/4 claims=12 calls=7 tok=4982 10s
+  [ 72/189] w_layer2   D07 rep1 → cov=0.125 hit=1/8 claims=12 calls=7 tok=4749 11s
+  [ 73/189] w_layer2   D06 rep2 → cov=0.0 hit=0/4 claims=12 calls=7 tok=4902 15s
+  [ 74/189] w_layer2   D08 rep1 → cov=0.0 hit=0/8 claims=12 calls=7 tok=4660 10s
+  [ 75/189] w_layer2   D07 rep2 → cov=0.0 hit=0/8 claims=12 calls=7 tok=4768 13s
+  [ 76/189] w_layer2   D08 rep3 → cov=0.0 hit=0/8 claims=12 calls=14 tok=4457 36s
+  [ 77/189] w_layer2   D07 rep3 → cov=0.125 hit=1/8 claims=12 calls=14 tok=5007 42s
+  [ 78/189] w_layer2   D08 rep2 → cov=0.0 hit=0/8 claims=12 calls=15 tok=4464 47s
+  [ 79/189] w_layer3   D01 rep1 → cov=0.0 hit=0/6 claims=12 calls=7 tok=4732 11s
+  [ 80/189] w_layer2   D09 rep3 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5009 13s
+  [ 81/189] w_layer2   D09 rep1 → cov=0.0 hit=0/8 claims=12 calls=29 tok=5332 47s
+  [ 82/189] w_layer2   D09 rep2 → cov=0.0 hit=0/8 claims=12 calls=28 tok=5350 49s
+  [ 83/189] w_layer3   D01 rep3 → cov=0.0 hit=0/6 claims=12 calls=7 tok=4246 9s
+  [ 84/189] w_layer3   D02 rep2 → cov=0.0 hit=0/5 claims=11 calls=7 tok=4502 9s
+  [ 85/189] w_layer3   D02 rep1 → cov=0.0 hit=0/5 claims=12 calls=13 tok=7595 15s
+  [ 86/189] w_layer3   D01 rep2 → cov=0.0 hit=0/6 claims=12 calls=13 tok=8790 19s
+  [ 87/189] w_layer3   D02 rep3 → cov=0.0 hit=0/5 claims=12 calls=19 tok=7896 44s
+  [ 88/189] w_layer3   D03 rep1 → cov=0.0 hit=0/6 claims=12 calls=31 tok=8098 48s
+  [ 89/189] w_layer3   D03 rep2 → cov=0.0 hit=0/6 claims=12 calls=31 tok=7589 46s
+  [ 90/189] w_layer3   D03 rep3 → cov=0.0 hit=0/6 claims=12 calls=25 tok=7462 46s
+  [ 91/189] w_layer3   D04 rep1 → cov=0.6 hit=3/5 claims=12 calls=31 tok=8476 56s
+  [ 92/189] w_layer3   D04 rep3 → cov=0.2 hit=1/5 claims=12 calls=13 tok=8565 18s
+  [ 93/189] w_layer3   D04 rep2 → cov=0.0 hit=0/5 claims=12 calls=13 tok=8147 26s
+  [ 94/189] w_layer3   D05 rep3 → cov=0.4 hit=2/5 claims=12 calls=13 tok=4006 35s
+  [ 95/189] w_layer3   D05 rep2 → cov=0.6 hit=3/5 claims=9 calls=25 tok=6599 49s
+  [ 96/189] w_layer3   D05 rep1 → cov=0.4 hit=2/5 claims=10 calls=30 tok=6588 53s
+  [ 97/189] w_layer3   D06 rep2 → cov=0.5 hit=2/4 claims=12 calls=13 tok=4806 36s
+  [ 98/189] w_layer3   D06 rep1 → cov=0.25 hit=1/4 claims=12 calls=30 tok=8071 40s
+  [ 99/189] w_layer3   D08 rep1 → cov=0.0 hit=0/8 claims=12 calls=7 tok=4351 11s
+  [100/189] w_layer3   D06 rep3 → cov=1.0 hit=4/4 claims=12 calls=13 tok=7840 20s
+  [101/189] w_layer3   D08 rep3 → cov=0.0 hit=0/8 claims=11 calls=7 tok=4268 10s
+  [102/189] w_layer3   D07 rep2 → cov=0.125 hit=1/8 claims=12 calls=7 tok=4326 28s
+  [103/189] w_layer3   D07 rep3 → cov=0.0 hit=0/8 claims=12 calls=7 tok=4537 30s
+  [104/189] w_layer3   D08 rep2 → cov=0.0 hit=0/8 claims=12 calls=13 tok=7650 18s
+  [105/189] w_layer3   D09 rep2 → cov=0.0 hit=0/8 claims=12 calls=7 tok=4528 9s
+  [106/189] w_layer3   D09 rep1 → cov=0.0 hit=0/8 claims=12 calls=7 tok=4952 10s
+  [107/189] w_layer3   D07 rep1 → cov=0.0 hit=0/8 claims=12 calls=7 tok=4638 38s
+  [108/189] w_layer3   D09 rep3 → cov=0.0 hit=0/8 claims=12 calls=12 tok=4632 32s
+  [109/189] l0_expand  D02 rep1 → cov=0.0 hit=0/5 claims=12 calls=13 tok=7058 49s
+  [110/189] l0_expand  D01 rep1 → cov=0.0 hit=0/6 claims=12 calls=14 tok=7173 59s
+  [111/189] l0_expand  D01 rep3 → cov=0.0 hit=0/6 claims=12 calls=15 tok=7591 59s
+  [112/189] l0_expand  D02 rep2 → cov=0.0 hit=0/5 claims=12 calls=14 tok=8945 68s
+  [113/189] l0_expand  D02 rep3 → cov=0.0 hit=0/5 claims=12 calls=14 tok=8987 46s
+  [114/189] l0_expand  D01 rep2 → cov=0.167 hit=1/6 claims=12 calls=16 tok=13125 102s
+  [115/189] l0_expand  D03 rep2 → cov=0.0 hit=0/6 claims=12 calls=14 tok=14207 83s
+  [116/189] l0_expand  D03 rep1 → cov=0.167 hit=1/6 claims=12 calls=14 tok=14941 97s
+  [117/189] l0_expand  D04 rep1 → cov=0.4 hit=2/5 claims=12 calls=12 tok=11693 65s
+  [118/189] l0_expand  D03 rep3 → cov=0.0 hit=0/6 claims=12 calls=16 tok=16064 90s
+  [119/189] l0_expand  D04 rep2 → cov=0.2 hit=1/5 claims=12 calls=14 tok=14347 87s
+  [120/189] l0_expand  D05 rep1 → cov=0.4 hit=2/5 claims=12 calls=14 tok=11754 70s
+  [121/189] l0_expand  D05 rep2 → cov=0.4 hit=2/5 claims=12 calls=14 tok=10518 61s
+  [122/189] l0_expand  D05 rep3 → cov=0.4 hit=2/5 claims=12 calls=12 tok=9248 41s
+  [123/189] l0_expand  D04 rep3 → cov=0.4 hit=2/5 claims=12 calls=14 tok=16051 103s
+  [124/189] l0_expand  D06 rep1 → cov=0.75 hit=3/4 claims=12 calls=16 tok=17460 122s
+  [125/189] l0_expand  D07 rep2 → cov=0.125 hit=1/8 claims=12 calls=14 tok=12018 66s
+  [126/189] l0_expand  D06 rep3 → cov=1.0 hit=4/4 claims=12 calls=16 tok=14694 90s
+  [127/189] l0_expand  D07 rep1 → cov=0.125 hit=1/8 claims=12 calls=14 tok=12621 93s
+  [128/189] l0_expand  D06 rep2 → cov=0.75 hit=3/4 claims=12 calls=16 tok=16814 105s
+  [129/189] l0_expand  D08 rep1 → cov=0.375 hit=3/8 claims=12 calls=12 tok=11461 58s
+  [130/189] l0_expand  D08 rep2 → cov=0.5 hit=4/8 claims=12 calls=12 tok=11576 66s
+  [131/189] l0_expand  D07 rep3 → cov=0.125 hit=1/8 claims=12 calls=14 tok=14017 88s
+  [132/189] l0_expand  D09 rep1 → cov=0.0 hit=0/8 claims=12 calls=14 tok=12989 73s
+  [133/189] l0_expand  D08 rep3 → cov=0.5 hit=4/8 claims=12 calls=14 tok=13276 87s
+  [134/189] skill_v1   D01 rep3 → cov=0.0 hit=0/6 claims=9 calls=7 tok=4397 15s
+  [135/189] skill_v1   D01 rep2 → cov=0.0 hit=0/6 claims=12 calls=7 tok=4721 21s
+  [136/189] skill_v1   D01 rep1 → cov=0.0 hit=0/6 claims=11 calls=8 tok=5449 23s
+  [137/189] skill_v1   D02 rep2 → cov=0.0 hit=0/5 claims=10 calls=7 tok=4560 18s
+  [138/189] skill_v1   D02 rep1 → cov=0.0 hit=0/5 claims=12 calls=7 tok=4662 20s
+  [139/189] skill_v1   D02 rep3 → cov=0.0 hit=0/5 claims=10 calls=7 tok=4837 21s
+  [140/189] l0_expand  D09 rep2 → cov=0.0 hit=0/8 claims=12 calls=14 tok=14487 85s
+  [141/189] skill_v1   D03 rep1 → cov=0.0 hit=0/6 claims=12 calls=7 tok=4600 19s
+  [142/189] skill_v1   D03 rep2 → cov=0.0 hit=0/6 claims=12 calls=7 tok=5389 26s
+  [143/189] skill_v1   D03 rep3 → cov=0.0 hit=0/6 claims=12 calls=7 tok=5408 28s
+  [144/189] skill_v1   D04 rep1 → cov=0.2 hit=1/5 claims=12 calls=7 tok=5378 24s
+  [145/189] skill_v1   D04 rep3 → cov=0.0 hit=0/5 claims=11 calls=7 tok=5102 26s
+  [146/189] skill_v1   D05 rep1 → cov=0.2 hit=1/5 claims=12 calls=7 tok=5146 30s
+  [147/189] skill_v1   D05 rep2 → cov=0.0 hit=0/5 claims=12 calls=7 tok=5186 27s
+  [148/189] skill_v1   D04 rep2 → cov=0.0 hit=0/5 claims=11 calls=7 tok=5427 54s
+  [149/189] skill_v1   D05 rep3 → cov=0.0 hit=0/5 claims=12 calls=7 tok=5167 25s
+  [150/189] l0_expand  D09 rep3 → cov=0.0 hit=0/8 claims=12 calls=14 tok=15703 147s
+  [151/189] skill_v1   D06 rep1 → cov=0.0 hit=0/4 claims=12 calls=7 tok=5485 26s
+  [152/189] skill_v1   D06 rep2 → cov=0.0 hit=0/4 claims=12 calls=7 tok=5429 24s
+  [153/189] skill_v1   D06 rep3 → cov=0.75 hit=3/4 claims=12 calls=7 tok=5528 29s
+  [154/189] skill_v1   D07 rep1 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5522 24s
+  [155/189] skill_v1   D08 rep1 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5215 26s
+  [156/189] skill_v1   D08 rep2 → cov=0.0 hit=0/8 claims=11 calls=7 tok=5181 23s
+  [157/189] skill_v1   D08 rep3 → cov=0.0 hit=0/8 claims=11 calls=7 tok=5569 26s
+  [158/189] skill_v1   D07 rep2 → cov=0.0 hit=0/8 claims=12 calls=8 tok=5925 47s
+  [159/189] skill_v1   D07 rep3 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5586 47s
+  [160/189] skill_v1   D09 rep1 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5422 26s
+  [161/189] skill_v3   D01 rep1 → cov=0.0 hit=0/6 claims=12 calls=7 tok=4943 16s
+  [162/189] skill_v1   D09 rep2 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5667 28s
+  [163/189] skill_v3   D01 rep2 → cov=0.0 hit=0/6 claims=12 calls=7 tok=5041 18s
+  [164/189] skill_v1   D09 rep3 → cov=0.125 hit=1/8 claims=8 calls=7 tok=5386 28s
+  [165/189] skill_v3   D01 rep3 → cov=0.0 hit=0/6 claims=11 calls=7 tok=4879 16s
+  [166/189] skill_v3   D02 rep2 → cov=0.0 hit=0/5 claims=8 calls=7 tok=4514 16s
+  [167/189] skill_v3   D02 rep1 → cov=0.0 hit=0/5 claims=12 calls=8 tok=5486 22s
+  [168/189] skill_v3   D02 rep3 → cov=0.0 hit=0/5 claims=11 calls=7 tok=4552 18s
+  [169/189] skill_v3   D03 rep1 → cov=0.0 hit=0/6 claims=12 calls=7 tok=5146 21s
+  [170/189] skill_v3   D03 rep2 → cov=0.0 hit=0/6 claims=12 calls=7 tok=5429 24s
+  [171/189] skill_v3   D03 rep3 → cov=0.0 hit=0/6 claims=12 calls=7 tok=5049 20s
+  [172/189] skill_v3   D04 rep1 → cov=0.0 hit=0/5 claims=12 calls=7 tok=5061 28s
+  [173/189] skill_v3   D04 rep2 → cov=0.0 hit=0/5 claims=12 calls=7 tok=5600 30s
+  [174/189] skill_v3   D04 rep3 → cov=0.0 hit=0/5 claims=10 calls=7 tok=5361 27s
+  [175/189] skill_v3   D05 rep1 → cov=0.0 hit=0/5 claims=11 calls=7 tok=4829 25s
+  [176/189] skill_v3   D05 rep2 → cov=0.2 hit=1/5 claims=12 calls=7 tok=5100 20s
+  [177/189] skill_v3   D05 rep3 → cov=0.2 hit=1/5 claims=11 calls=7 tok=4914 23s
+  [178/189] skill_v3   D06 rep1 → cov=0.25 hit=1/4 claims=12 calls=7 tok=5728 25s
+  [179/189] skill_v3   D06 rep2 → cov=0.25 hit=1/4 claims=12 calls=7 tok=5707 22s
+  [180/189] skill_v3   D06 rep3 → cov=0.25 hit=1/4 claims=12 calls=7 tok=5324 23s
+  [181/189] skill_v3   D07 rep1 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5274 22s
+  [182/189] skill_v3   D07 rep2 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5472 21s
+  [183/189] skill_v3   D08 rep3 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5684 22s
+  [184/189] skill_v3   D08 rep1 → cov=0.0 hit=0/8 claims=11 calls=8 tok=6230 29s
+  [185/189] skill_v3   D07 rep3 → cov=0.0 hit=0/8 claims=6 calls=8 tok=5915 29s
+  [186/189] skill_v3   D08 rep2 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5396 36s
+  [187/189] skill_v3   D09 rep1 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5105 27s
+  [188/189] skill_v3   D09 rep2 → cov=0.0 hit=0/8 claims=12 calls=7 tok=5278 28s
+  [189/189] skill_v3   D09 rep3 → cov=0.0 hit=0/8 claims=11 calls=7 tok=5405 28s
+★ 跑完 189 个单元

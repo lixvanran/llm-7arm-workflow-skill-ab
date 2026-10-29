@@ -10,7 +10,7 @@ import argparse, concurrent.futures as cf, json, os, pathlib, sys, time
 
 HERE = pathlib.Path(__file__).resolve().parent
 REPO = HERE.parent.parent
-sys.path.insert(0, str(REPO / "l0"))
+# ★ 不再把 worktree 的 l0/ 放进 sys.path（★ 它的 llm.py 会抢同名模块 ★）
 sys.path.insert(0, str(HERE))          # ★ 我的目录必须【在最前】★ ——★ 否则 l0/llm.py 会抢同名模块 ★
 import importlib.util
 from llm import LLMBase, LLMChat, Stats          # noqa: E402
@@ -18,7 +18,9 @@ import arms as A                                   # noqa: E402
 
 from metric import key_tokens, coarse_cover   # ★ 从 l0/run_l0.py 原样 AST 抽出（★ 见 metric.py ★）
 
-DEVSET = (REPO / "来源与底稿" / "第三组_治塌缩层3" / "cmp8repo" / "repro" / "devset" / "devset.json")
+_LOCAL_DS = pathlib.Path(__file__).resolve().parent / "inputs" / "devset.json"
+DEVSET = (_LOCAL_DS if _LOCAL_DS.exists()
+          else (REPO / "来源与底稿" / "第三组_治塌缩层3" / "cmp8repo" / "repro" / "devset" / "devset.json"))
 OUT = HERE / "out"
 
 
@@ -50,6 +52,7 @@ def run_unit(arm, task, rep, model):
             "coverage": cov.get("coverage"), "n_hit": cov.get("n_hit"), "n_gold": cov.get("n_gold"),
             "per_conclusion": cov.get("per_conclusion"),
             "n_claims": len(claims), "calls": st.summary(),
+            "call_log": st.calls,
             "wall_s": round(time.time() - t0, 1), "extra": r.get("extra", {})}
 
 
@@ -99,7 +102,7 @@ def main():
                      "calls": {"n_calls": 0, "n_fail": 1, "tokens": 0},
                      "wall_s": 0, "extra": {"exception": str(e)[:200]}}
             fh.write(json.dumps(r, ensure_ascii=False) + "\n"); fh.flush()
-            for c in r.get("calls", {}).get("raw", []) or []:
+            for c in r.get("call_log", []) or []:
                 fc.write(json.dumps({"arm": arm, "task_id": tid, "rep": rep, **c}, ensure_ascii=False) + "\n")
             fc.flush()
             n += 1

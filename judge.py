@@ -15,7 +15,9 @@ import json, pathlib, statistics as st, sys
 from itertools import combinations
 
 HERE = pathlib.Path(__file__).resolve().parent
-OUT = HERE / "out"
+# ★ out 目录：★ 本目录优先、★ 上一级回落（★ 解压后 code/ 与 out/ 同级 ★）
+_OUT_CANDIDATES = [HERE / "out", HERE.parent / "out"]
+OUT = next((c for c in _OUT_CANDIDATES if c.exists()), _OUT_CANDIDATES[0])
 
 ARM_NAME = {
     "direct": "直调（1 次）",

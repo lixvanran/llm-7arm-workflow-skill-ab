@@ -20,14 +20,15 @@ FILES = [
     (HERE / "run.py", "code/run.py"),
     (HERE / "metric.py", "code/metric.py"),
     (HERE / "judge.py", "code/judge.py"),
-    (ROOT / "来源与底稿/第三组_治塌缩层3/cmp8repo/repro/devset/devset.json", "inputs/devset.json"),
-    (ROOT / "来源与底稿/第三组_治塌缩层3/cmp8repo/repro/src/workflow.py", "vendor/thirdgrp/workflow.py"),
-    (ROOT / "来源与底稿/第三组_治塌缩层3/cmp8repo/repro/src/anchor_out.py", "vendor/thirdgrp/anchor_out.py"),
-    (ROOT / "来源与底稿/第三组_治塌缩层3/cmp8repo/repro/src/judge/u1_lib.py", "vendor/thirdgrp/judge/u1_lib.py"),
-    (ROOT / "来源与底稿/第三组_治塌缩层3/cmp8repo/repro/src/judge/measure.py", "vendor/thirdgrp/judge/measure.py"),
-    (ROOT / "来源与底稿/第三组_治塌缩层3/cmp8repo/repro/src/space.py", "vendor/thirdgrp/space.py"),
-    (ROOT / "来源与底稿/第三组_治塌缩层3/cmp8repo/repro/src/run_dev.py", "vendor/thirdgrp/run_dev.py"),
-    (ROOT / "l0/agent.py", "vendor/l0/agent.py"),
+    (HERE / "inputs/devset.json", "inputs/devset.json"),
+    (HERE / "vendor/thirdgrp/workflow.py", "vendor/thirdgrp/workflow.py"),
+    (HERE / "vendor/thirdgrp/anchor_out.py", "vendor/thirdgrp/anchor_out.py"),
+    (HERE / "vendor/thirdgrp/judge/u1_lib.py", "vendor/thirdgrp/judge/u1_lib.py"),
+    (HERE / "vendor/thirdgrp/judge/measure.py", "vendor/thirdgrp/judge/measure.py"),
+    (HERE / "vendor/thirdgrp/space.py", "vendor/thirdgrp/space.py"),
+    (HERE / "vendor/thirdgrp/run_dev.py", "vendor/thirdgrp/run_dev.py"),
+    (HERE / "vendor/l0/agent.py", "vendor/l0/agent.py"),
+    (HERE / "vendor/l0/run_l0.py", "vendor/l0/run_l0.py"),
     (HERE / "out/units_ab1.jsonl", "out/units_ab1.jsonl"),
     (HERE / "out/units_ab2.jsonl", "out/units_ab2.jsonl"),
     (HERE / "out/calls_ab2.jsonl", "out/calls_ab2.jsonl"),
@@ -58,7 +59,8 @@ def main():
     # skill 资产
     for name, rel in [("thinking-surface", "vendor/skill/thinking-surface"),
                        ("thinking-surface-v3", "vendor/skill/thinking-surface-v3")]:
-        d = SKILL_DIR / name
+        local = HERE / "vendor" / "skill" / name
+        d = local if local.exists() else (SKILL_DIR / name)
         if d.exists():
             shutil.copytree(d, stage / rel, dirs_exist_ok=True)
         else:
@@ -81,7 +83,7 @@ def main():
         "- `out/` 两遍跑批的逐单元产出、逐调用记录与出表结果\n"
         "- `samples/` 每题每臂 rep1 的原始答案（人肉可读）\n"
         "- `SHA256SUMS.txt` 非循环锚（用 `sha256sum SHA256SUMS.txt` 核）\n\n"
-        "★ 复算：解压后 `python3 code/judge.py ab2`（★ 需把 `out/` 与 `code/` 保持同级或改路径 ★）\n",
+        "★ 复算：解压后 `python3 code/judge.py ab2`（★ 零改动、★ 只读 `out/units_ab2.jsonl`、★ 不调 API ★）\n",
         encoding="utf-8")
     # SHA256SUMS.txt（★ 不含自身 ⇒ 非循环 ★）
     lines = []
